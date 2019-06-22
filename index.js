@@ -9,7 +9,7 @@ const express = require('express'),
 const app = express();
 
 mongoose.connect(keys.mongoURI);
-// mongoose.connect('mongodb://localhost/emaily');
+mongoose.connect('mongodb://localhost/emaily');
 
 app.use(
 	cookieSession({
@@ -20,7 +20,6 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-api.use(restify.plugins.queryParser({ mapParams: false }));
 
 require('./routes/authRoutes')(app);
 
