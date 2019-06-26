@@ -9,7 +9,7 @@ const express = require('express'),
 	 
 const app = express();
 mongoose.connect(keys.mongoURI);
-mongoose.connect('mongodb://localhost/emaily');
+// mongoose.connect('mongodb://localhost/emaily');
 
 app.use(bodyParser.json());
 
